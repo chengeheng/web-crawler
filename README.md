@@ -18,3 +18,27 @@ pipreqs ./
 ```commandline
 pip3 install -r requirements.txt 
 ```
+
+## requests
+
+底层实现就是`urllib`，能够自动帮助我们解压（gzip压缩的等）响应内容
+
+### 使用
+
+```python
+import requests
+
+r = requests.get("url")
+print(r.content.decode())
+```
+
+打印图片需要操作文件指令
+```python
+import requests
+
+response = requests.get("url")
+
+with open("二哈.jpg", "wb") as f:
+    f.write(response.content)
+
+```
