@@ -42,3 +42,14 @@ with open("二哈.jpg", "wb") as f:
     f.write(response.content)
 
 ```
+
+## 请求
+
+- get请求
+```python
+response_get = requests.get(url, headers=headers)
+```
+- post请求
+```python
+response_post = requests.post(url, headers=headers, data=data)
+```

@@ -23,6 +23,7 @@ class TiebaSpider(object):
     def save_html(self, html_str, num):
         """保存到本地"""
         file_name = "贴吧_" + self.text + " 第{}页".format(num) + ".html"
+        """指定打开文件的编码格式"""
         with open(file_name, "w", encoding="utf-8") as f:
             f.write(html_str)
 
