@@ -53,3 +53,23 @@ response_get = requests.get(url, headers=headers)
 ```python
 response_post = requests.post(url, headers=headers, data=data)
 ```
+
+
+## 代理
+
+主要分为三类：
+
+- 透明代理
+- 匿名代理
+- 高匿代理
+
+**使用**
+
+```python
+proxies = {
+    "http": "代理地址",
+    "https": "代理地址"
+}
+
+responst = requests.get(url, proxies=proxies)
+```
