@@ -66,6 +66,8 @@ response_post = requests.post(url, headers=headers, data=data)
 **使用**
 
 ```python
+import requests
+
 proxies = {
     "http": "代理地址",
     "https": "代理地址"
@@ -73,3 +75,25 @@ proxies = {
 
 responst = requests.get(url, proxies=proxies)
 ```
+
+## md5算法（信息摘要）
+
+```python
+import hashlib
+
+str01 = "abcd1234"
+
+md5 = hashlib.md5()
+md5.update(str01.encode())
+# 得到加密后的数据
+result = md5.hexdigest()
+print(result)
+```
+
+## 响应数据处理
+
+1. 结构化的响应内容
+    - json字符串：可以使用re、json等模块来提取待定数据
+
+2. 非结构化的响应内容
+    - html字符串：可以使用re、lxml等模块来提取特定数据
